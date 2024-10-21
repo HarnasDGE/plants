@@ -2,7 +2,7 @@ import FacebookIcon from "../assets/icons/facebook.svg";
 import TwitterIcon from "../assets/icons/twitter.svg";
 import GoogleIcon from "../assets/icons/google.svg";
 import PinterestIcon from "../assets/icons/pinterest.svg";
-import LinkedInIcon from "../assets/icons/linkedIn.svg";
+import LinkedInIcon from "../assets/icons/linkedin.svg";
 
 export const SocialShare = () => {
   const socialPlatforms = [
