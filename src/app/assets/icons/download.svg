@@ -1,0 +1,11 @@
+<svg className="fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_673_52928)">
+<path d="M18.4375 12.2266V17.6562C18.4375 18.087 18.087 18.4375 17.6562 18.4375H2.34375C1.91297 18.4375 1.5625 18.087 1.5625 17.6562V12.2266H0V17.6562C0 18.9486 1.05141 20 2.34375 20H17.6562C18.9486 20 20 18.9486 20 17.6562V12.2266H18.4375Z" fill="currentColor"/>
+<path d="M13.7502 9.20766L10.7815 12.1764V0H9.21898V12.1764L6.25023 9.20766L5.14539 10.3125L10.0002 15.1673L14.8551 10.3125L13.7502 9.20766Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_673_52928">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

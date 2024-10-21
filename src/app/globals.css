@@ -1,0 +1,89 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background-second: #fff8f1;
+  --color-main: #00730c;
+  --color-second: #0c4b35;
+  --color-mainss: rgb(202, 240, 206);
+
+  --color-input-bg: #c5c5c5;
+  --color-search-border: #c5c5c5;
+  --color-input-border: #c5c5c5;
+  --color-textarea-border: #c5c5c5;
+
+  --color-gradient1: #00730c;
+  --color-gradient2: #f9f9f9;
+
+  --color1: #0b0b0b;
+  --color6: #ffffff;
+  --color-card-bg: #e3e3e3;
+  --color-card-bg2: #242424;
+  --color2: #f0f0f0;
+  --color3: #d9f1df;
+  --color4: #fbeee7;
+
+  --color5: #f6f6f6;
+
+  --color-icon-blue-dark: #375490;
+  --color-icon-blue-light: #009fee;
+  --color-icon-blue-sky: #367cff;
+  --color-icon-blue-medium: #0079b2;
+  --color-icon-light: #ffffff;
+  --color-icon-red: #ef1408;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+.active {
+  @apply text-main font-bold;
+}
+
+.activeMobile {
+  @apply text-textLight font-bold;
+}
+h1 {
+  @apply text-5xl xl:font-extrabold 2xl:font-extrabold font-bold 2xl:mb-5 xl:mb-5 mb-3;
+}
+
+h2 {
+  @apply text-4xl font-extrabold mt-8 mb-4;
+}
+h3 {
+  @apply text-3xl font-bold mt-3 mb-2;
+}
+h4 {
+  @apply text-2xl font-bold mt-2 mb-1;
+}
+
+p {
+  @apply text-xl my-4;
+}
+
+li {
+  @apply text-xl;
+}
+
+blockquote {
+  @apply bg-blockqouteBg p-7 italic;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
