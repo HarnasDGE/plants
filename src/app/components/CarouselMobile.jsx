@@ -1,11 +1,17 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const CarouselMobile = ({ children, pagination = true }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0); // Nowa zmienna na szerokość slajdu
   const isDragging = useRef(false);
   const startX = useRef(0);
+
+  useEffect(() => {
+    // Ten efekt uruchomi się tylko po stronie klienta
+    setSlideWidth(window.innerWidth);
+  }, []);
 
   const slideCount = React.Children.count(children);
   const gap = 16; // Odstęp między slajdami w pikselach (1rem = 16px)
@@ -24,7 +30,7 @@ export const CarouselMobile = ({ children, pagination = true }) => {
 
   const handleEnd = () => {
     isDragging.current = false;
-    const threshold = window.innerWidth / 4;
+    const threshold = slideWidth / 4; // Używamy zmiennej slideWidth zamiast window.innerWidth
     if (translateX < -threshold && currentIndex < slideCount - 1) {
       setCurrentIndex(currentIndex + 1);
     } else if (translateX > threshold && currentIndex > 0) {
@@ -34,7 +40,6 @@ export const CarouselMobile = ({ children, pagination = true }) => {
   };
 
   // Obliczenia dla szerokości slajdów i przesunięcia
-  const slideWidth = window.innerWidth; // Szerokość pojedynczego slajdu
   const totalGap = gap * (slideCount - 1); // Całkowity odstęp między slajdami
   const totalWidth = slideWidth * slideCount + totalGap; // Całkowita szerokość karuzeli
 
