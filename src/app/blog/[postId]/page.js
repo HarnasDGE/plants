@@ -50,3 +50,4 @@ export async function generateStaticParams() {
   }));
 }
 export const dynamicParams = true; // Pozwól generować ścieżki dynamicznie na bieżąco
+export const dynamic = "force-dynamic";
