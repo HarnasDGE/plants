@@ -11,12 +11,6 @@ import { GetInTouch } from "../components/GetInTouch";
 import { Map } from "../components/Map";
 import React, { Suspense } from "react"; // Importujemy Suspense
 
-export const metadata = {
-  title: `Faq - ${TITLE_WEBSITE}`,
-  description:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took of type and scrambled it to make a type specimen book.",
-};
-
 export default function Home() {
   return (
     <main className="w-full flex flex-col gap-[100px] ">
