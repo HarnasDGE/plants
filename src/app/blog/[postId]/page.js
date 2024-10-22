@@ -17,11 +17,7 @@ export const metadata = {
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took of type and scrambled it to make a type specimen book.",
 };
 
-export default function Home({ params }) {
-  const { postId } = params;
-
-  const article = postsDb.find((post) => post.id.toString() === postId);
-
+export default function BlogDetails({ article }) {
   if (!article) {
     return <div>Nie ma takiego wpisu</div>;
   }
@@ -46,4 +42,26 @@ export default function Home({ params }) {
       </GridWrapper>
     </main>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = postsDb.map((post) => ({
+    params: { postId: post.id.toString() },
+  }));
+  return { paths, fallback: "blocking" }; // fallback: 'blocking' zapewnia generowanie stron na żądanie
+}
+
+export async function getStaticProps({ params }) {
+  const { postId } = params;
+  const article = postsDb.find((post) => post.id.toString() === postId);
+
+  if (!article) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      article,
+    },
+  };
 }
