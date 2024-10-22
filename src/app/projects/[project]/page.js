@@ -1,10 +1,8 @@
 import { SmallHero } from "@/app/components/SmallHero";
-import Project1Image from "@/app/assets/projects/project1.jpg";
-import Project2Image from "@/app/assets/projects/project2.jpg";
-import Project3Image from "@/app/assets/projects/project3.jpg";
 import { ProjectDetails } from "@/app/components/ProjectDetails";
 import { RelatedProjects } from "@/app/components/RelatedProjects";
 import { projects } from "@/app/constans/projects";
+import { TITLE_WEBSITE } from "@/app/constans/mainInfo";
 
 export const metadata = {
   title: `Project Details - ${TITLE_WEBSITE}`,
