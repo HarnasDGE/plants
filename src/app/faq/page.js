@@ -30,7 +30,9 @@ export default function Home() {
           <Suspense fallback={<div>Loading...</div>}>
             <Search title=" Have Any Questions?" />
           </Suspense>
-          <FaqCategories />
+          <Suspense fallback={<div>Loading...</div>}>
+            <FaqCategories />
+          </Suspense>
           <GetInTouch />
         </Sidebar>
       </GridWrapper>
