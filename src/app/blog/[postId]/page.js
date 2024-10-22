@@ -49,3 +49,4 @@ export async function generateStaticParams() {
     postId: post.id.toString(),
   }));
 }
+export const dynamicParams = true; // Pozwól generować ścieżki dynamicznie na bieżąco

@@ -31,3 +31,4 @@ export async function generateStaticParams() {
     service: service.param,
   }));
 }
+export const dynamicParams = true; // Pozwól generować ścieżki dynamicznie na bieżąco
