@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { WidthWrapper } from "./WidthWrapper";
 import { Button } from "./Button";

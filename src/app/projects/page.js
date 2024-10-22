@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CtaSecond } from "../components/CtaSecond";
 import { IntroduceSomeProject } from "../components/IntroduceSomeProject";
 import { SmallHero } from "../components/SmallHero";
@@ -16,7 +17,11 @@ export default function Home() {
         title="Projects"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took of type and scrambled it to make a type specimen book."
       />
-      <IntroduceSomeProject />
+      <Suspense fallback={<div>Loading...</div>}>
+        {" "}
+        <IntroduceSomeProject />
+      </Suspense>
+
       <CtaSecond />
     </main>
   );

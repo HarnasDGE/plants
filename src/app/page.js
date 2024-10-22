@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CallUs } from "./components/CallUs";
 import { Faq } from "./components/Faq";
 import { Hero } from "./components/Hero";
@@ -19,7 +20,10 @@ export default function Home() {
       <CallUs />
       <TrainedStaff />
       <WhatClientsSaying />
-      <Faq />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Faq />
+      </Suspense>
+
       <InsightsAndArticles />
     </main>
   );

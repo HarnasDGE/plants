@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { LatestUpdate } from "../components/LatestUpdate";
 import { SmallHero } from "../components/SmallHero";
 import { TITLE_WEBSITE } from "../constans/mainInfo";
@@ -15,7 +16,9 @@ export default function Home() {
         title="Blog"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took of type and scrambled it to make a type specimen book."
       />
-      <LatestUpdate />
+      <Suspense flallback={<div>Loading...</div>}>
+        <LatestUpdate />
+      </Suspense>
     </main>
   );
 }

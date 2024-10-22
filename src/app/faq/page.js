@@ -1,3 +1,4 @@
+"use client";
 import { SmallHero } from "@/app/components/SmallHero";
 import { TITLE_WEBSITE } from "@/app/constans/mainInfo";
 import { GridWrapper } from "../components/GridWrapper";
@@ -8,6 +9,7 @@ import { Sidebar } from "../components/Sidebar";
 import { AskYourQuestion } from "../components/AskYourQuestion";
 import { GetInTouch } from "../components/GetInTouch";
 import { Map } from "../components/Map";
+import React, { Suspense } from "react"; // Importujemy Suspense
 
 export const metadata = {
   title: `Faq - ${TITLE_WEBSITE}`,
@@ -24,12 +26,16 @@ export default function Home() {
       />
       <GridWrapper>
         <div className="flex flex-col gap-10 h-fit">
-          <Faq desc={false} displayImage={false} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Faq desc={false} displayImage={false} />
+          </Suspense>
           <AskYourQuestion />
         </div>
 
         <Sidebar>
-          <Search title=" Have Any Questions?" />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Search title=" Have Any Questions?" />
+          </Suspense>
           <FaqCategories />
           <GetInTouch />
         </Sidebar>
